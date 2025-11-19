@@ -84,7 +84,7 @@ vim .env
 
 ```bash
 # 启动应用
-python run.py
+python app.py
 
 # 或使用 uvicorn
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
@@ -130,7 +130,7 @@ AstralAgent/
 └── README.md                   # 本文件
 ```
 
-详细架构设计请参阅 [FINAL_ARCHITECTURE_DESIGN.md](docs/FINAL_ARCHITECTURE_DESIGN.md)
+详细架构设计请参阅 [FINAL_ARCHITECTURE_DESIGN.md](docs/最终架构设计方案.md)
 
 ## API 使用示例
 
@@ -376,7 +376,7 @@ kubectl logs -f deployment/astralagent-api
 
 ## 文档
 
-- [架构设计](docs/FINAL_ARCHITECTURE_DESIGN.md)
+- [架构设计](docs/最终架构设计方案.md)
 - [架构分析与优化](docs/ARCHITECTURE_ANALYSIS_AND_OPTIMIZATION.md)
 - [AI Native 设计](docs/AI_Native_Architecture_Design.md)
 - [API 文档](http://localhost:8000/docs)

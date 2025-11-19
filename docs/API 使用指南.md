@@ -62,14 +62,14 @@ DEBUG=true
 ```bash
 cd backend
 export DEBUG=true
-python run.py
+python app.py
 ```
 
 2. **方法 2：修改 .env 文件**
 ```bash
 cd backend
 echo "DEBUG=true" >> .env
-python run.py
+python app.py
 ```
 
 3. **方法 3：强制启用（开发环境）**
@@ -298,7 +298,7 @@ curl http://localhost:8000/api/v1/
 1. **确保后端已启动**
    ```bash
    cd backend
-   python run.py
+   python app.py
    ```
 
 2. **确保 debug 模式开启**（才能访问 Swagger）
@@ -322,7 +322,7 @@ curl http://localhost:8000/api/v1/
 1. **启动后端**
    ```bash
    cd backend
-   python run.py
+   python app.py
    ```
 
 2. **访问 Swagger**

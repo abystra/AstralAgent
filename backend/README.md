@@ -39,13 +39,13 @@ cp env.example .env
 
 ```bash
 # 方式 1：直接运行
-python run.py
+python app.py
 
 # 方式 2：使用 uvicorn
 uvicorn app.main:app --reload
 
 # 方式 3：使用 uv run
-uv run python run.py
+uv run python app.py
 ```
 
 ### 4. 访问

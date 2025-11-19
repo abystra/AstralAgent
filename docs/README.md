@@ -2,7 +2,7 @@
 
 ## 核心文档
 
-### 1. [架构设计](FINAL_ARCHITECTURE_DESIGN.md)
+### 1. [架构设计](最终架构设计方案.md)
 完整的系统架构设计方案，包括：
 - 架构概览
 - 系统架构
@@ -13,14 +13,14 @@
 - 性能设计
 - 安全设计
 
-### 2. [项目结构](PROJECT_STRUCTURE.md)
+### 2. [项目结构](项目结构说明.md)
 项目目录结构说明，包括：
 - 目录结构
 - 模块职责
 - 依赖关系
 - 扩展说明
 
-### 3. [API 使用指南](API_USAGE.md) ✨
+### 3. [API 使用指南](API 使用指南.md) ✨
 API 使用和测试指南，包括：
 - Swagger 文档访问
 - 接口测试方法
@@ -68,7 +68,7 @@ API 使用和测试指南，包括：
 ### 1. 启动后端
 ```bash
 cd backend
-python run.py
+python app.py
 ```
 
 ### 2. 访问 Swagger
@@ -79,4 +79,4 @@ http://localhost:8000/docs
 ### 3. 测试接口
 在 Swagger UI 中点击 "Try it out" 即可测试接口。
 
-详见：[API 使用指南](API_USAGE.md)
+详见：[API 使用指南](API 使用指南.md)

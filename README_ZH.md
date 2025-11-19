@@ -240,7 +240,7 @@ LOG_FORMAT=json
 
 ```bash
 cd backend
-python run.py
+python app.py
 ```
 
 或者使用 uvicorn：
@@ -273,7 +273,7 @@ pnpm dev
 - **主页**：http://localhost:5173
 - 仪表盘、智能体、工作流等页面
 
-**注意**：Swagger 文档只有在 `DEBUG=true` 时才会启用。详见 [API 使用指南](docs/API_USAGE.md)
+**注意**：Swagger 文档只有在 `DEBUG=true` 时才会启用。详见 [API 使用指南](docs/API 使用指南.md)
 
 ---
 
@@ -301,8 +301,8 @@ pnpm dev
 
 ## 📚 文档
 
-- [架构设计](docs/FINAL_ARCHITECTURE_DESIGN.md)
-- [项目结构](docs/PROJECT_STRUCTURE.md)
+- [架构设计](docs/最终架构设计方案.md)
+- [项目结构](docs/项目结构说明.md)
 
 ---
 
