@@ -1,5 +1,5 @@
 import axios, { AxiosError } from 'axios'
-import { message } from 'antd'
+import { Toast } from 'antd-mobile'
 
 // 创建 axios 实例
 const apiClient = axios.create({
@@ -34,7 +34,10 @@ apiClient.interceptors.response.use(
       if (data.code === 0 || data.success) {
         return response
       } else {
-        message.error(data.message || '请求失败')
+        Toast.show({
+          icon: 'fail',
+          content: data.message || '请求失败',
+        })
         return Promise.reject(new Error(data.message))
       }
     }
@@ -47,27 +50,48 @@ apiClient.interceptors.response.use(
       
       switch (status) {
         case 401:
-          message.error('未授权，请重新登录')
+          Toast.show({
+            icon: 'fail',
+            content: '未授权，请重新登录',
+          })
           // 清除 token 并跳转到登录页
           localStorage.removeItem('token')
           window.location.href = '/login'
           break
         case 403:
-          message.error('没有权限访问该资源')
+          Toast.show({
+            icon: 'fail',
+            content: '没有权限访问该资源',
+          })
           break
         case 404:
-          message.error('请求的资源不存在')
+          Toast.show({
+            icon: 'fail',
+            content: '请求的资源不存在',
+          })
           break
         case 500:
-          message.error(data?.message || '服务器错误')
+          Toast.show({
+            icon: 'fail',
+            content: data?.message || '服务器错误',
+          })
           break
         default:
-          message.error(data?.message || '请求失败')
+          Toast.show({
+            icon: 'fail',
+            content: data?.message || '请求失败',
+          })
       }
     } else if (error.request) {
-      message.error('网络错误，请检查网络连接')
+      Toast.show({
+        icon: 'fail',
+        content: '网络错误，请检查网络连接',
+      })
     } else {
-      message.error('请求配置错误')
+      Toast.show({
+        icon: 'fail',
+        content: '请求配置错误',
+      })
     }
     
     return Promise.reject(error)

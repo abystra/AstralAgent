@@ -1,18 +1,26 @@
-import { Card, Empty, Button } from 'antd'
-import { PlusOutlined } from '@ant-design/icons'
+import { Card, Button, Empty } from 'antd-mobile'
+import { AddOutline } from 'antd-mobile-icons'
 
 export default function WorkflowList() {
   return (
-    <Card
-      title="工作流管理"
-      extra={
-        <Button type="primary" icon={<PlusOutlined />}>
-          创建工作流
-        </Button>
-      }
-    >
-      <Empty description="暂无工作流" />
-    </Card>
+    <div className="mobile-page">
+      <div className="mobile-title">工作流管理</div>
+      <Card>
+        <Empty description="暂无工作流" />
+        <div style={{ marginTop: 16, textAlign: 'center' }}>
+          <Button
+            color="primary"
+            fill="solid"
+            size="large"
+            style={{ width: '100%' }}
+            onClick={() => {
+              // TODO: 跳转到创建工作流页面
+            }}
+          >
+            <AddOutline /> 创建工作流
+          </Button>
+        </div>
+      </Card>
+    </div>
   )
 }
-

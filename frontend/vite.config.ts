@@ -20,5 +20,17 @@ export default defineConfig({
       },
     },
   },
+  // 移动端 H5 优化
+  build: {
+    target: 'es2015',
+    cssCodeSplit: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+  },
 })
 

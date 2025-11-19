@@ -1,80 +1,74 @@
-import { useState } from 'react'
-import { Outlet, Link, useLocation } from 'react-router-dom'
-import { Layout as AntLayout, Menu, theme } from 'antd'
+/**
+ * 移动端布局组件
+ * 
+ * 使用 Ant Design Mobile 的 TabBar 实现底部导航
+ */
+
+import { useState, useEffect } from 'react'
+import { Outlet, useNavigate, useLocation } from 'react-router-dom'
+import { TabBar } from 'antd-mobile'
 import {
-  DashboardOutlined,
-  RobotOutlined,
-  ApartmentOutlined,
-  SettingOutlined,
-} from '@ant-design/icons'
-import type { MenuProps } from 'antd'
+  AppOutline,
+  UnorderedListOutline,
+  SetOutline,
+} from 'antd-mobile-icons'
 import './style.css'
 
-const { Header, Sider, Content } = AntLayout
-
-type MenuItem = Required<MenuProps>['items'][number]
-
-const items: MenuItem[] = [
+const tabs = [
   {
     key: '/',
-    icon: <DashboardOutlined />,
-    label: <Link to="/">仪表盘</Link>,
+    title: '首页',
+    icon: <AppOutline />,
   },
   {
     key: '/agents',
-    icon: <RobotOutlined />,
-    label: <Link to="/agents">智能体</Link>,
+    title: '智能体',
+    icon: <UnorderedListOutline />,
   },
   {
     key: '/workflows',
-    icon: <ApartmentOutlined />,
-    label: <Link to="/workflows">工作流</Link>,
+    title: '工作流',
+    icon: <UnorderedListOutline />,
   },
   {
     key: '/settings',
-    icon: <SettingOutlined />,
-    label: <Link to="/settings">设置</Link>,
+    title: '设置',
+    icon: <SetOutline />,
   },
 ]
 
 export default function Layout() {
-  const [collapsed, setCollapsed] = useState(false)
+  const navigate = useNavigate()
   const location = useLocation()
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken()
+  const [activeKey, setActiveKey] = useState(location.pathname)
+
+  // 监听路由变化，同步 TabBar 状态
+  useEffect(() => {
+    setActiveKey(location.pathname)
+  }, [location.pathname])
+
+  const handleTabChange = (key: string) => {
+    setActiveKey(key)
+    navigate(key)
+  }
 
   return (
-    <AntLayout style={{ minHeight: '100vh' }}>
-      <Sider collapsible collapsed={collapsed} onCollapse={setCollapsed}>
-        <div className="logo">
-          <h1>{collapsed ? 'AA' : 'AstralAgent'}</h1>
-        </div>
-        <Menu
-          theme="dark"
-          selectedKeys={[location.pathname]}
-          mode="inline"
-          items={items}
-        />
-      </Sider>
-      <AntLayout>
-        <Header style={{ padding: '0 24px', background: colorBgContainer }}>
-          <h2>企业级多智能体平台</h2>
-        </Header>
-        <Content style={{ margin: '16px' }}>
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
-          >
-            <Outlet />
-          </div>
-        </Content>
-      </AntLayout>
-    </AntLayout>
+    <div className="mobile-layout">
+      {/* 主内容区 */}
+      <div className="mobile-content">
+        <Outlet />
+      </div>
+
+      {/* 底部导航栏 */}
+      <TabBar
+        activeKey={activeKey}
+        onChange={handleTabChange}
+        className="mobile-tabbar"
+      >
+        {tabs.map((item) => (
+          <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
+        ))}
+      </TabBar>
+    </div>
   )
 }
-
