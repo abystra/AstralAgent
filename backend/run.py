@@ -3,7 +3,7 @@ import uvicorn
 
 if __name__ == "__main__":
     uvicorn.run(
-        "app.main:app",
+        "app.main:app",  # app 目录在 backend 下，所以路径不变
         host="0.0.0.0",
         port=8000,
         reload=True,  # 开发模式自动重载

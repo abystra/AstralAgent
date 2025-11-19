@@ -1,0 +1,111 @@
+  # English error messages
+
+# General errors (10000-10099)
+10000: "Unknown error"
+10001: "Invalid request"
+10002: "Missing required parameter"
+10003: "Invalid parameter"
+
+# Authentication and authorization errors (10100-10199)
+10100: "Unauthorized, please login first"
+10101: "Invalid access token"
+10102: "Access token expired"
+10103: "Insufficient permissions"
+10104: "Invalid credentials"
+10105: "Account disabled"
+10106: "Account locked"
+
+# Resource errors (10200-10299)
+10200: "Resource not found"
+10201: "Resource already exists"
+10202: "Resource deleted"
+10203: "Resource locked"
+
+# Rate limit errors (10300-10399)
+10300: "Rate limit exceeded"
+10301: "Quota exceeded"
+10302: "Request too large"
+10303: "Too many requests, please try again later"
+
+# Validation errors (10400-10499)
+10400: "Validation error"
+10401: "Invalid format"
+10402: "Invalid value"
+10403: "Duplicate value"
+10404: "Constraint violation"
+
+# System errors (20000-20099)
+20000: "Internal server error"
+20001: "Service temporarily unavailable"
+20002: "Service timeout"
+20003: "Configuration error"
+
+# Database errors (20100-20199)
+20100: "Database error"
+20101: "Database connection error"
+20102: "Database query error"
+20103: "Database constraint error"
+20104: "Database deadlock"
+
+# Cache errors (20200-20299)
+20200: "Cache error"
+20201: "Cache connection error"
+20202: "Cache operation error"
+
+# Message queue errors (20300-20399)
+20300: "Message queue error"
+20301: "Message publish error"
+20302: "Message consume error"
+
+# Agent errors (30000-30099)
+30000: "Agent execution error"
+30001: "Agent not found"
+30002: "Agent execution failed"
+30003: "Agent execution timeout"
+30004: "Agent initialization error"
+30005: "Agent invalid state"
+
+# Workflow errors (30100-30199)
+30100: "Workflow execution error"
+30101: "Workflow not found"
+30102: "Workflow execution failed"
+30103: "Workflow execution timeout"
+30104: "Workflow invalid state"
+
+# Tool errors (30200-30299)
+30200: "Tool execution error"
+30201: "Tool not found"
+30202: "Tool execution failed"
+30203: "Tool permission denied"
+30204: "Tool invalid input"
+
+# RAG errors (30300-30399)
+30300: "RAG error"
+30301: "Document not found"
+30302: "Document parse error"
+30303: "Embedding error"
+30304: "Retrieval error"
+30305: "Vector store error"
+
+# Model errors (40000-40099)
+40000: "Model invocation error"
+40001: "Model not found"
+40002: "Model invocation timeout"
+40003: "Model rate limit exceeded"
+40004: "Model invalid response"
+40005: "Model API error"
+40006: "Model quota exceeded"
+
+# External service errors (40100-40199)
+40100: "External service error"
+40101: "External service timeout"
+40102: "External service unavailable"
+40103: "External API error"
+
+# Plugin errors (40200-40299)
+40200: "Plugin error"
+40201: "Plugin not found"
+40202: "Plugin load error"
+40203: "Plugin initialization error"
+40204: "Plugin execution error"
+

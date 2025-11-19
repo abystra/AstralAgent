@@ -1,0 +1,18 @@
+.dashboard {
+  width: 100%;
+}
+
+.health-check-item {
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 4px;
+}
+
+.health-check-item pre {
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  overflow-x: auto;
+}
+

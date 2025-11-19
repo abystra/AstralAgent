@@ -1,6 +1,4 @@
-# ============================================
 # Python
-# ============================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -21,171 +19,45 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
-.mypy_cache/
-.dmypy.json
-dmypy.json
-.pyre/
-.pytype/
 
-# ============================================
 # Virtual environments
-# ============================================
 venv/
 env/
 ENV/
 .venv
-env.bak/
-venv.bak/
-.conda/
+backend/.venv/
+backend/venv/
+backend/env/
 
-# ============================================
-# IDE & Editor
-# ============================================
-.vscode/
+# IDE
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
-.project
-.classpath
-.settings/
-*.sublime-project
-*.sublime-workspace
-*.code-workspace
 
-# ============================================
-# Cursor AI (可能包含敏感配置)
-# ============================================
-.cursor/
-
-# ============================================
-# Environment variables & Secrets (敏感)
-# ============================================
+# Environment
 .env
-.env.*
-!.env.example
 .env.local
-.env.*.local
-*.key
-*.pem
-*.p12
-*.pfx
-*.crt
-*.cert
-secrets/
-*.secret
-config.local.*
-credentials.json
-service-account*.json
 
-# ============================================
-# Database files
-# ============================================
-*.db
-*.sqlite
-*.sqlite3
-*.db-journal
-*.db-shm
-*.db-wal
-data/
-*.dump
-
-# ============================================
-# Cache & Temporary files
-# ============================================
-.cache/
-*.cache
-tmp/
-temp/
-.tmp/
-*.tmp
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.tox/
-.nox/
-.hypothesis/
-.jupyter/
-
-# ============================================
-# Logs (可能包含敏感信息)
-# ============================================
+# Logs
 *.log
 logs/
-*.log.*
-log/
 
-# ============================================
-# OS files
-# ============================================
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-Desktop.ini
 
-# ============================================
-# Package managers
-# ============================================
-# UV (注意: uv.lock 应该提交到 git)
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.coverage
+backend/htmlcov/
+
+# uv
 .uv/
-
-# Poetry
-poetry.lock
-
-# Pip
-pip-log.txt
-pip-delete-this-directory.txt
-
-# ============================================
-# FastAPI / Web specific
-# ============================================
-staticfiles/
-media/
-uploads/
-downloads/
-
-# ============================================
-# Testing & Coverage
-# ============================================
-.pytest_cache/
-.coverage
-.coverage.*
-htmlcov/
-.tox/
-.nox/
-.hypothesis/
-.pytest_cache/
-test-results/
-coverage.xml
-*.cover
-.hypothesis/
-
-# ============================================
-# Documentation builds
-# ============================================
-docs/_build/
-docs/.doctrees/
-site/
-
-# ============================================
-# Backup files
-# ============================================
-*.bak
-*.backup
-*.old
-*~
-
-# ============================================
-# Local development
-# ============================================
-local/
-local_settings.py
-local_config.py
-*.local
-
